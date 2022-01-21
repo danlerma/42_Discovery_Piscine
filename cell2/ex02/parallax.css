@@ -1,0 +1,39 @@
+.parallax 
+{
+    height: 100vh;
+    width: 100%; 
+    background: cadetblue;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body{margin:0;}
+.text
+{
+    position: relative;
+    top: 50%;
+}
+
+.bloque
+{
+    height: 100px;
+    color:white;
+    background-color: black;
+}
+
+div
+{
+    text-align: center;
+    top: 50%;
+}
+
+#num1
+{
+    background-image: url("gunter1.png");
+}
+
+#num2
+{
+    background-image:url("gunter2.png") ;
+}

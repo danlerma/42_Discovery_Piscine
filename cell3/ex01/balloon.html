@@ -1,0 +1,52 @@
+<html>
+    <script>
+        'use strict'
+        window.addEventListener('load',  () => {
+            document.getElementById('ball').style.backgroundColor = 'red';
+        })
+        function aum()
+        {
+            const color = {
+                "red":"green",
+                "green":"blue",
+                "blue":"red"
+                };
+            document.getElementById("ball").style.backgroundColor = color[document.getElementById("ball").style.getPropertyValue("background-color")];
+            const h = document.getElementById("ball").offsetHeight;
+            if (h > 420)
+                h = 190;
+            document.getElementById("ball").style.width = h + 10;
+            document.getElementById("ball").style.height = h + 10;
+        }
+        function dis()
+        {
+            const color = {
+                "red":"blue",
+                "blue":"green",
+                "green":"red"
+                };
+            document.getElementById("ball").style.backgroundColor = color[document.getElementById("ball").style.getPropertyValue("background-color")];
+            const h = document.getElementById("ball").offsetHeight;
+            if (h <= 200)
+                h = 205;
+            document.getElementById("ball").style.width = h - 5;
+            document.getElementById("ball").style.height = h -5;
+        }
+    </script>
+    <style> 
+        .ballon 
+        {
+            background-color:red;
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <body>
+        <div id="ball" class="ballon" onclick="aum()" onmouseout="dis()"></div>
+    </body>
+</html>
